@@ -9,5 +9,5 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <WebView2 Source="https://www.baidu.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    <WebView2 Source="https://www.bing.com" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 </Page>
