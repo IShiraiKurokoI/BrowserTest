@@ -11,12 +11,14 @@
     mc:Ignorable="d">
     <Grid Name="Root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="Root_Loaded">
         <TabView x:Name="Tabs" 
-                             VerticalAlignment="Stretch"
-                             AddTabButtonClick="Tabs_AddTabButtonClick"
-                             TabCloseRequested="Tabs_TabCloseRequested"
-                             AllowDropTabs="True"
-                             CanDragTabs="True"
-                             CanReorderTabs="True">
+                 VerticalAlignment="Stretch"
+                 AddTabButtonClick="Tabs_AddTabButtonClick"
+                 TabCloseRequested="Tabs_TabCloseRequested"
+                 AllowDropTabs="True"
+                 CanDragTabs="True"
+                 CanReorderTabs="True"
+                 TabWidthMode="Equal"
+                 Background="Transparent">
             <TabView.TabStripHeader>
                 <Grid x:Name="ShellTitleBarInset" Background="Transparent" />
             </TabView.TabStripHeader>

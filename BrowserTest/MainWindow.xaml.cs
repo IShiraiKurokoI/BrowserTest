@@ -40,14 +40,13 @@ namespace BrowserTest
         {
             this.InitializeComponent();
             m_AppWindow = this.AppWindow;
-            m_AppWindow.TitleBar.ExtendsContentIntoTitleBar = true;
-            m_AppWindow.TitleBar.ButtonBackgroundColor = Colors.Transparent;
             m_AppWindow.Resize(new SizeInt32(1600, 900));
         }
 
         private void Root_Loaded(object sender, RoutedEventArgs e)
         {
             Tabs.TabItemsChanged += Tabs_TabItemsChanged;
+            ExtendsContentIntoTitleBar = true;
             SetTitleBar(CustomDragRegion);
             CustomDragRegion.MinWidth = 188;
             SetupWindow();
@@ -99,16 +98,12 @@ namespace BrowserTest
             return newTab;
         }
 
-        // This method prevents the TabView from handling things that aren't text (ie. files, images, etc.)
-        private void Tabs_TabStripDragOver(object sender, DragEventArgs e)
-        {
-            
-        }
 
         private void Tabs_AddTabButtonClick(TabView sender, object args)
         {
             var tab = CreateNewTVI("New Item", "New Item");
             sender.TabItems.Add(tab);
+            sender.SelectedIndex = sender.TabItems.Count - 1;
         }
 
         private void Tabs_TabCloseRequested(TabView sender, TabViewTabCloseRequestedEventArgs args)

@@ -54,9 +54,9 @@ namespace BrowserTest
                 ElementTheme = ElementTheme.Default,
                 TitleBarCustomization = new TitleBarCustomization
                 {
-                    TitleBarType = TitleBarType.AppWindow
+                    TitleBarType = TitleBarType.Window
                 }
-            });
+            }); 
             var hWnd = WinRT.Interop.WindowNative.GetWindowHandle(m_window);
             Microsoft.UI.WindowId windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
             Microsoft.UI.Windowing.AppWindow appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
